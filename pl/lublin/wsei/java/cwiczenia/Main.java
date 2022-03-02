@@ -39,5 +39,12 @@ public class Main {
             System.out.println("\nWynik dodawania " + num1 + " + " + num2 + " = " + (num1+num2));
         }
 
+        //Punkt 10
+        for(;;){
+            System.out.print("Podaj liczbę: ");
+            num1 = input.nextInt();
+            if(num1 == 0) break;
+            System.out.println("DEC = " + num1 + ", BIN = " + Integer.toBinaryString(num1) + ", HEX = " + Integer.toHexString(num1));
+        }
     }
 }
