@@ -1,5 +1,6 @@
 package pl.lublin.wsei.java.cwiczenia;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
@@ -45,6 +46,24 @@ public class Main {
             num1 = input.nextInt();
             if(num1 == 0) break;
             System.out.println("DEC = " + num1 + ", BIN = " + Integer.toBinaryString(num1) + ", HEX = " + Integer.toHexString(num1));
+        }
+
+        //Punkt 11
+        int[] liczby = new int[30];
+        Random random = new Random();
+
+        for(int i = 0; i < 30; i++){
+            liczby[i] = random.nextInt();
+
+            int mx = Integer.MIN_VALUE, mn = Integer.MIN_VALUE;
+            long avg = 0;
+            for (int l : liczby) {
+                System.out.println(l);
+                if (l < mn) mn = l;
+                if (l > mx) mx = l;
+                avg += l;
+            }
+            System.out.println("MIN = " + mn + ", MAX = " + mx + ", AVG = " + (float)avg/liczby.length);
         }
     }
 }
