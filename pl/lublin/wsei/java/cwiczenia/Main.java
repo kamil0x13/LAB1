@@ -1,5 +1,7 @@
 package pl.lublin.wsei.java.cwiczenia;
 
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -23,5 +25,13 @@ public class Main {
             sum += Math.pow(2,i);
             System.out.println(i + "\t" + (Math.log(i)/Math.log(2)) + "\t" + sum);
         }
+
+        Scanner input = new Scanner(System.in);
+        int num1, num2;
+        System.out.print("Podaj pierwszą liczbę: ");
+        num1 = input.nextInt();
+        System.out.println("Podaj drugą liczbę: ");
+        num2 = input.nextInt();
+        System.out.println("Wynik dodawania " + num1 + " " + num2 + " = " + (num1+num2));
     }
 }
