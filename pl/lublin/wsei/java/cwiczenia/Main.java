@@ -26,12 +26,18 @@ public class Main {
             System.out.println(i + "\t" + (Math.log(i)/Math.log(2)) + "\t" + sum);
         }
 
+        //Punkt 8-9
         Scanner input = new Scanner(System.in);
         int num1, num2;
-        System.out.print("Podaj pierwszą liczbę: ");
-        num1 = input.nextInt();
-        System.out.println("Podaj drugą liczbę: ");
-        num2 = input.nextInt();
-        System.out.println("Wynik dodawania " + num1 + " " + num2 + " = " + (num1+num2));
+        for(;;){
+            System.out.print("Podaj pierwszą liczbę: ");
+            num1 = input.nextInt();
+            if(num1 == 0) break;
+            System.out.print("\nPodaj drugą liczbę: ");
+            num2 = input.nextInt();
+            if(num2==0)break;
+            System.out.println("\nWynik dodawania " + num1 + " + " + num2 + " = " + (num1+num2));
+        }
+
     }
 }
